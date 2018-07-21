@@ -6,39 +6,70 @@ html, body {
     height: 100%;
 }
 
-#banner{
+header{
 	position:fixed;
-	top:0;
-	width:100%;
+	width:100%; 
 	background:lightblue;
-	height: 10%;	
+	height: 50px;
+}
+h1{
 	font-weight: bold;
-	font-size : 25px;
+	font-size : 40px;
     text-align: center;
 }
-
-#side {	
-	height:100%;
-	width:15%;
-	position:fixed;
-	top:10%;
-	background-color : lightblue;
-	font-weight: bold;
-	font-size : 20px;
-	margin: 0px;
-    padding: 0px;
+#sidebar-wrapper {
+  margin-left: -250px;
+  left: 250px;
+  width: 150px;
+  background: lightblue;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
 }
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width:600px) {
+    #sidebar-wrapper {
+      left: 0;
+    }
+    #wrapper.active {
+      position: relative;
+      left: 250px;
+    }
+    #wrapper.active #sidebar-wrapper {
+      left: 250px;
+      width: 250px;
+    }
 
+}
 ul {
 	list-style-type: none;
 	display: block;
+	font-weight: bold;
+	font-size : 20px;
 	margin: 3%;
-    padding: 10%;
+    padding-top: 50px;
+    padding-left: 0px;
     line-height: 180%;
 }
+a{
+	color: black;
+	text-decoration: none;
+}
+a:hover{
+	color: #006699;
+}
+
 #content{
-	padding-left: 18%;
-	padding-top: 10%;
+	padding-left: 0%;
+	padding-top: 70px;
 	background:#F6F2F2;
 	min-height:100%;
 	font-size : 18px;
@@ -47,9 +78,6 @@ h2{
 	font-weight: bold;
 	font-size : 18px;
 	font-weight: bold;
-	margin: 0px;
-	margin-top:2%;
-    padding: 0px;
     text-align: center;
 }
 table{
@@ -66,10 +94,5 @@ th, td {
     padding: 5px;
 	text-align: left;
 }
-.images{
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    margin-top:2%;
-}
+
+
