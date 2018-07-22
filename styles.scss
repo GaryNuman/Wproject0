@@ -1,0 +1,102 @@
+$colorSH: lightblue;
+
+*{
+	font-family: Verdana, Sans-serif;
+	box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+
+header{
+    background-color: $colorSH;
+    padding: 30px;
+}
+h1{
+	font-weight: bold;
+	font-size : 40px;
+    text-align: center;
+}
+
+nav{
+	float: left;
+    width: 20%;
+    background-color: $colorSH;
+    height:100%;
+
+}
+nav ul {
+	list-style-type: none;
+	display: block;
+	font-weight: bold;
+	font-size : 20px;
+}
+a{
+	color: black;
+	text-decoration: none;
+}
+a:hover{
+	color: #006699;
+	text-decoration: none;
+}
+
+#content {
+    float: left;
+    padding: 20px;
+    width: 80%;
+    background-color: #F6F2F2;
+    height:100%;
+
+    h2{
+        font-weight: bold;
+        font-size : 18px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+@media (max-width: 600px) {
+    nav, #content {
+        width: 100%;
+        height: auto;
+    }
+}
+
+table{
+	border: 3px solid gray;
+    border-collapse: collapse;
+    width: 40%;
+   	margin: auto;
+   	margin-top:2%;
+   	color:gray;
+    th, td {
+        border-bottom: 1px solid gray;
+        border-top: 1px solid gray;
+        padding: 5px;
+        text-align: left;
+    }
+}
+
+.images{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top:2%;
+}
+.container{
+	padding-top: 50px;
+}
+
+%message{
+    background-color: #476b6b
+}
+.GN{
+    @extend %message;
+    color:#99ff66
+}
+.BN{
+    @extend %message;
+    color:#ff8080
+}
+
+
